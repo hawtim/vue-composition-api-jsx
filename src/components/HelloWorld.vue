@@ -1,13 +1,13 @@
 
 <script>
-import { ref, defineComponent } from "@vue/composition-api";
+import { defineComponent } from "@vue/composition-api";
 
 export default defineComponent({
   props: ["msg"],
-  setup() {
+  setup(props) {
     return () => (
       <div class="hello">
-        <h1>{this.msg}</h1>
+        <h1>{props.msg}</h1>
         <h3>Installed CLI Plugins</h3>
         <ul>
           <li>
